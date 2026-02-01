@@ -4,12 +4,12 @@ const stats = [
   {
     icon: "/images/stats/operations.svg",
     value: "+20000",
-    label: "Thousands of successful rhinoplasty procedures completed",
+    label: "Thousands of successful dental rehabilitations and implant treatments completed",
   },
   {
     icon: "/images/stats/years.svg",
     value: "30+",
-    label: "Years of experience in rhinoplasty",
+    label: "Years of experience in dental rehabilitations and implant treatments",
   },
   {
     icon: "/images/stats/countries.svg",
@@ -19,7 +19,7 @@ const stats = [
   {
     icon: "/images/stats/satisfaction.svg",
     value: "%98",
-    label: "Patient satisfaction rate after rhinoplasty procedures",
+    label: "Patient satisfaction rate after dental procedures",
   },
 ];
 

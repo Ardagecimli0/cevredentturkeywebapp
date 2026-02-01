@@ -36,7 +36,7 @@ export default function Header() {
 
         {/* CTA Button */}
         <a
-          href="https://api.whatsapp.com/send?phone=905467633630&text=I%20want%20to%20get%20information%20about%20dental%20treatments"
+          href="https://api.whatsapp.com/send/?phone=905494755287&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           className={`btn-green rounded-full text-white font-semibold flex items-center gap-2 transition-all duration-300 ${isScrolled ? 'px-4 py-2 text-sm' : 'px-6 py-3 text-base'
