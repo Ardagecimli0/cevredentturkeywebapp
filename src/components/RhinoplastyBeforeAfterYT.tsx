@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/lib/i18n";
+
 const videos = [
     { id: "v2ZA0P2OYio" },
     { id: "Wv50Iyy0Bk0" },
@@ -8,16 +10,19 @@ const videos = [
 ];
 
 export default function RhinoplastyBeforeAfterYT() {
+    const { t } = useTranslation();
+
     return (
         <section className="py-16 md:py-20 bg-[#12171e]">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Title */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#c9a96e' }}>
-                    Dental Transformations: Before & After Results                </h2>
+                    {t('rhinoplastyBeforeAfterYT.title')}
+                </h2>
 
                 {/* Subtitle */}
                 <p className="text-gray-400 text-center mb-12 max-w-xl mx-auto">
-                    Explore patient journeys and smile makeovers.
+                    {t('rhinoplastyBeforeAfterYT.subtitle')}
                     <br />
                 </p>
 

@@ -1,31 +1,30 @@
 "use client";
 
 import Image from "next/image";
-
-const reasons = [
-  {
-    title: "Affordable Prices:",
-    description:
-      "Turkey offers high-quality dental treatments at competitive prices compared to many European countries.",
-  },
-  {
-    title: "Experienced Specialists:",
-    description:
-      "Experienced implantologists and dental technicians provide predictable and long-lasting results.",
-  },
-  {
-    title: "Advanced Techniques:",
-    description:
-      "Computer-guided implant placement, CAD/CAM restorations and modern implant systems ensure precision.",
-  },
-  {
-    title: "Comprehensive Care:",
-    description:
-      "From diagnostics to final restorations and aftercare everything is planned for a comfortable experience.",
-  },
-];
+import { useTranslation } from "@/lib/i18n";
 
 export default function WhyTurkey() {
+  const { t } = useTranslation();
+
+  const reasons = [
+    {
+      title: t('whyTurkey.reasons.affordable.title'),
+      description: t('whyTurkey.reasons.affordable.description'),
+    },
+    {
+      title: t('whyTurkey.reasons.specialists.title'),
+      description: t('whyTurkey.reasons.specialists.description'),
+    },
+    {
+      title: t('whyTurkey.reasons.techniques.title'),
+      description: t('whyTurkey.reasons.techniques.description'),
+    },
+    {
+      title: t('whyTurkey.reasons.care.title'),
+      description: t('whyTurkey.reasons.care.description'),
+    },
+  ];
+
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-[#0c1015] to-[#151b23]">
       <div className="max-w-7xl mx-auto">
@@ -33,7 +32,7 @@ export default function WhyTurkey() {
           {/* Left Side - Title and Image */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-8">
-              Why Choose Turkey for Your Dental Treatment?
+              {t('whyTurkey.title')}
             </h2>
             <div className="overflow-hidden rounded-lg group cursor-pointer">
               <Image

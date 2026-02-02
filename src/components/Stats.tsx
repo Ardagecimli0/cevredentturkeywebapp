@@ -1,29 +1,33 @@
 "use client";
 
-const stats = [
-  {
-    icon: "/images/stats/operations.svg",
-    value: "+20000",
-    label: "Thousands of successful dental rehabilitations and implant treatments completed",
-  },
-  {
-    icon: "/images/stats/years.svg",
-    value: "30+",
-    label: "Years of experience in dental rehabilitations and implant treatments",
-  },
-  {
-    icon: "/images/stats/countries.svg",
-    value: "%95",
-    label: "of Patients recommend Op. Dr. Can Kalkavan",
-  },
-  {
-    icon: "/images/stats/satisfaction.svg",
-    value: "%98",
-    label: "Patient satisfaction rate after dental procedures",
-  },
-];
+import { useTranslation } from "@/lib/i18n";
 
 export default function Stats() {
+  const { t } = useTranslation();
+
+  const stats = [
+    {
+      icon: "/images/stats/operations.svg",
+      value: t('stats.operations.value'),
+      label: t('stats.operations.label'),
+    },
+    {
+      icon: "/images/stats/years.svg",
+      value: t('stats.years.value'),
+      label: t('stats.years.label'),
+    },
+    {
+      icon: "/images/stats/countries.svg",
+      value: t('stats.recommend.value'),
+      label: t('stats.recommend.label'),
+    },
+    {
+      icon: "/images/stats/satisfaction.svg",
+      value: t('stats.satisfaction.value'),
+      label: t('stats.satisfaction.label'),
+    },
+  ];
+
   return (
     <section className="py-16 bg-[#0c1015]">
       <div className="max-w-7xl mx-auto px-6">

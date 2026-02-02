@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,11 +44,11 @@ export default function Header() {
             }`}
         >
           {/* Mobil metin: md ekranlarda gizlenir */}
-          <span className="md:hidden">Free Consultation</span>
+          <span className="md:hidden">{t('header.ctaMobile')}</span>
 
           {/* Masaüstü metin: mobilde gizlenir, md ve üzerinde görünür */}
           <span className="hidden md:inline">
-            Contact us now for dental treatments!
+            {t('header.ctaDesktop')}
           </span>
         </a>
       </div>

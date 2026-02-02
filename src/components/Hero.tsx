@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Hero() {
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ export default function Hero() {
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -19,10 +21,10 @@ export default function Hero() {
   useEffect(() => {
     const detectCountry = async () => {
       try {
-        const response = await fetch("https://ipapi.co/json/");
+        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
         const data = await response.json();
-        if (data.country_code) {
-          setCountryCode(data.country_code.toLowerCase());
+        if (data.countryCode) {
+          setCountryCode(data.countryCode.toLowerCase());
         }
       } catch (error) {
         console.error("Could not detect country:", error);
@@ -99,20 +101,20 @@ export default function Hero() {
           <div className="lg:col-span-5 space-y-6">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-[50px] font-bold text-white mb-4 leading-tight">
-                Dental Clinic in Turkey
+                {t('hero.title')}
               </h1>
               <p className="text-[#b08d57] text-xl md:text-2xl font-bold leading-snug">
-                Enhance Your Smile with CevreDent<br />
-                Clinic&apos;s Affordable Services
+                {t('hero.subtitle')}<br />
+                {t('hero.subtitleLine2')}
               </p>
             </div>
 
             <div className="bg-[#1c2530]/80 backdrop-blur-sm rounded-xl p-5 border border-gray-800">
-              <h3 className="text-2xl font-bold text-white mb-4">Free Consultation</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">{t('hero.formTitle')}</h3>
               <form onSubmit={handleSubmit} className="space-y-3">
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder={t('hero.formNamePlaceholder')}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
@@ -126,14 +128,14 @@ export default function Hero() {
                 />
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t('hero.formEmailPlaceholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
                   required
                 />
                 <button type="submit" className="w-full bg-[#25D366] py-3 rounded-lg text-white font-bold hover:bg-[#1eb956] transition-colors">
-                  SUBMIT
+                  {t('hero.formSubmit')}
                 </button>
               </form>
             </div>

@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-12 bg-[#1c2530] border-t border-gray-800">
       {/* max-w-7xl ve px-4/6 değerleri logoyu biraz içeride tutar. 
@@ -21,10 +24,10 @@ export default function Footer() {
             />
             <div className="space-y-1">
               <p className="text-gray-300 text-sm md:text-base max-w-md leading-relaxed">
-                Premium Dental Care — Full Mouth Rehabilitation and Implant Specialist
+                {t('footer.description')}
               </p>
               <p className="text-gray-500 text-xs pt-2">
-                Copyright © 2026 CevreDent Clinic - All Rights Reserved
+                {t('footer.copyright')}
               </p>
             </div>
           </div>
@@ -40,7 +43,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-gray-300 text-sm md:text-base leading-snug">
-                Mecidiyeköy Mahallesi, Büyükdere Cd. Ocak Apt No:91 Kat 2 Daire:2, 34387 Şişli/İstanbul
+                {t('footer.address')}
               </span>
             </div>
 
@@ -51,7 +54,7 @@ export default function Footer() {
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
               <a href="mailto:info@cevredentclinic.com" className="text-gray-300 text-sm md:text-base hover:text-white transition-colors">
-                info@cevredentclinic.com
+                {t('footer.email')}
               </a>
             </div>
 
@@ -61,7 +64,7 @@ export default function Footer() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               <a href="tel:+905494755287" className="text-gray-300 text-sm md:text-base font-medium hover:text-white transition-colors">
-                +90 549 475 52 87
+                {t('footer.phone')}
               </a>
             </div>
           </div>

@@ -4,21 +4,23 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "@/lib/i18n";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
+  const { t } = useTranslation();
 
   // IP adresinden ülke otomatik algılama
   useEffect(() => {
     const detectCountry = async () => {
       try {
-        const response = await fetch("https://ipapi.co/json/");
+        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
         const data = await response.json();
-        if (data.country_code) {
-          setCountryCode(data.country_code.toLowerCase());
+        if (data.countryCode) {
+          setCountryCode(data.countryCode.toLowerCase());
         }
       } catch (error) {
         console.error("Could not detect country:", error);
@@ -67,10 +69,10 @@ export default function ContactForm() {
             {/* Sol Taraf - Form */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                Get Your Free Consultation
+                {t('contactForm.title')}
               </h2>
               <p className="text-gray-400 mb-8 text-sm">
-                Fill out the form and we'll contact you shortly
+                {t('contactForm.subtitle')}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -85,7 +87,7 @@ export default function ContactForm() {
                     </div>
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder={t('contactForm.namePlaceholder')}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
@@ -98,7 +100,7 @@ export default function ContactForm() {
                     country={countryCode}
                     value={phone}
                     onChange={(value) => setPhone(value)}
-                    placeholder="Your Phone"
+                    placeholder={t('contactForm.phonePlaceholder')}
                     enableSearch={true}
                     containerClass="phone-input-container"
                   />
@@ -112,7 +114,7 @@ export default function ContactForm() {
                     </div>
                     <input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder={t('contactForm.emailPlaceholder')}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
@@ -125,7 +127,7 @@ export default function ContactForm() {
                     type="submit"
                     className="w-full bg-[#25D366] hover:bg-[#20BD5A] py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-green-500/20"
                   >
-                    SUBMIT
+                    {t('contactForm.submit')}
                   </button>
                 </div>
               </form>

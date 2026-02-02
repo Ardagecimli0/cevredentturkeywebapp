@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
 export default function HospitalHotel() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-[#12171e]"> {/* Üst ve alt boşluk artırıldı */}
       <div className="max-w-7xl mx-auto px-4"> {/* max-w-6xl'den 7xl'e çıkarıldı */}
@@ -21,7 +24,7 @@ export default function HospitalHotel() {
               />
               <div className="absolute top-6 right-6 z-10">
                 <span className="bg-[#b08d57] px-6 py-2.5 rounded-full text-[#FFFFFF] text-sm font-bold uppercase tracking-widest shadow-lg">
-                  CLINIC
+                  {t('hospitalHotel.clinicBadge')}
                 </span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c1015]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -30,11 +33,11 @@ export default function HospitalHotel() {
             <div className="text-center">
               {/* h3 fontu text-xl yapıldı */}
               <h3 className="text-xl md:text-2xl text-white mb-3">
-                Our dental treatments are performed in
+                {t('hospitalHotel.clinicSubtitle')}
               </h3>
               {/* Ana başlık text-3xl yapıldı */}
               <p className="text-[#b08d57] text-2xl md:text-3xl font-extrabold tracking-tight">
-                CevreDent Dental Clinic
+                {t('hospitalHotel.clinicName')}
               </p>
             </div>
           </div>
@@ -52,7 +55,7 @@ export default function HospitalHotel() {
               />
               <div className="absolute top-6 right-6 z-10">
                 <span className="bg-[#b08d57] px-6 py-2.5 rounded-full text-[#FFFFFF] text-sm font-bold uppercase tracking-widest shadow-lg">
-                  HOTEL
+                  {t('hospitalHotel.hotelBadge')}
                 </span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c1015]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -60,10 +63,10 @@ export default function HospitalHotel() {
 
             <div className="text-center">
               <h3 className="text-xl md:text-2xl text-white mb-3">
-                Our guests stay at
+                {t('hospitalHotel.hotelSubtitle')}
               </h3>
               <p className="text-[#b08d57] text-2xl md:text-3xl font-extrabold tracking-tight">
-                Istanbul Kailyn Hotel
+                {t('hospitalHotel.hotelName')}
               </p>
             </div>
           </div>
