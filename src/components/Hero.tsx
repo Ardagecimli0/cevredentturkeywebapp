@@ -34,13 +34,38 @@ export default function Hero() {
     detectCountry();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Name: ${name}, Phone: +${phone}, Email: ${email}`;
-    window.open(
-      `https://api.whatsapp.com/send/?phone=905494755287&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
-      "_blank"
-    );
+
+    try {
+      // Prepare the data to send to the API
+      const data = {
+        name: name,
+        phone: `+${phone}`,
+        email: email,
+      };
+
+      // Submit the form data to the API
+      await fetch(`https://zoho.hotelistan.net/api/form-patient`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data }),
+      });
+
+      // Get the current language from the URL
+      const currentPath = window.location.pathname;
+      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
+      const lang = langMatch ? langMatch[1] : 'en';
+
+      // Redirect to thank you page with language
+      window.location.href = `/${lang}-implant-in-turkey/thank-you`;
+    } catch (error) {
+      console.error("API isteği başarısız:", error);
+      // Optionally show an error message to the user
+      alert("There was an error submitting your form. Please try again.");
+    }
   };
 
   return (

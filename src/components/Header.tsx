@@ -30,7 +30,7 @@ export default function Header() {
             alt="Cevre Dental Logo"
             width={150}
             height={60}
-            className={`transition-all duration-300 ${isScrolled ? "h-10 w-auto" : "h-14 w-auto"
+            className={`transition-all duration-300 ${isScrolled ? "h-9 md:h-10 w-auto" : "h-12 md:h-14 w-auto"
               }`}
           />
         </div>

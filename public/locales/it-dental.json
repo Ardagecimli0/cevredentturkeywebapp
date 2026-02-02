@@ -95,7 +95,7 @@
         "clinicSubtitle": "I nostri trattamenti dentali vengono eseguiti presso",
         "clinicName": "Clinica Dentale CevreDent",
         "hotelSubtitle": "I nostri ospiti soggiornano presso",
-        "hotelName": "Istanbul Kailyn Hotel"
+        "hotelName": "Istanbul Milord Hotel"
     },
     "packages": {
         "title": "I NOSTRI PACCHETTI",
@@ -260,6 +260,11 @@
                 "description": "Dalla diagnosi ai restauri finali e al post-cura, tutto è pianificato per un'esperienza confortevole."
             }
         }
+    },
+    "thankYou": {
+        "title": "Grazie",
+        "message": "Grazie per il tuo messaggio. Ti risponderemo il prima possibile.",
+        "backToHome": "Torna alla home"
     },
     "cookieConsent": {
         "title": "Cookie Preferences",
