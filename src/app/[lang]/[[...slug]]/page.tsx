@@ -14,7 +14,6 @@ import ContactForm from "@/components/ContactForm";
 import DoctorInfo from "@/components/DoctorInfo";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
 
 export default function Home() {
   return (

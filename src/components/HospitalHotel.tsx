@@ -48,7 +48,7 @@ export default function HospitalHotel() {
             <div className="relative rounded-3xl overflow-hidden mb-8 w-full max-w-lg shadow-2xl border border-transparent hover:border-[#b08d57]/30 transition-all duration-300 hover:-translate-y-4 group">
               <Image
                 src="/images/hotel.png"
-                alt="Istanbul Kailyn Hotel"
+                alt="Istanbul Milord Hotel"
                 width={600}
                 height={450}
                 className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
