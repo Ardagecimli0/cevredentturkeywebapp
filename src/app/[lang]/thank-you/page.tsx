@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 
 export default function ThankYouPage() {
@@ -26,12 +27,12 @@ export default function ThankYouPage() {
 
                 {/* Optional: Add a back to home button */}
                 <div className="mt-12">
-                    <a
+                    <Link
                         href="/"
                         className="inline-block px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-green-500/20"
                     >
                         {t('thankYou.backToHome')}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </main>
