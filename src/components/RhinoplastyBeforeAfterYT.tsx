@@ -1,26 +1,24 @@
 "use client";
 
 const videos = [
-    { id: "GG4GJ-EXStk" },
-    { id: "SEKtg-TsSOM" },
-    { id: "xaDB3TOi0jU" },
-    { id: "_giOJAHYusw" },
+    { id: "v2ZA0P2OYio" },
+    { id: "Wv50Iyy0Bk0" },
+    { id: "eemE3Z3i2IA" },
+    { id: "AIjifEPPHFQ" },
 ];
 
 export default function RhinoplastyBeforeAfterYT() {
     return (
-        <section className="py-16 md:py-20 bg-[#0c1015]">
+        <section className="py-16 md:py-20 bg-[#12171e]">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Title */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#c9a96e' }}>
-                    Rhinoplasty: Before & After Results
-                </h2>
+                    Dental Transformations: Before & After Results                </h2>
 
                 {/* Subtitle */}
                 <p className="text-gray-400 text-center mb-12 max-w-xl mx-auto">
-                    Explore the natural transformations achieved through the expertise of
+                    Explore patient journeys and smile makeovers.
                     <br />
-                    <span className="text-gray-300">Op. Dr. Can Kalkavan.</span>
                 </p>
 
                 {/* Videos Grid */}

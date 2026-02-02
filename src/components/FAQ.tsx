@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What is rhinoplasty?",
+    question: "Is the brand of the implant important? Does the implant have quality",
     answer:
-      "Rhinoplasty is a surgical procedure that reshapes or repairs the nose. It can be performed for cosmetic purposes to improve the appearance of the nose or for functional purposes to correct breathing problems.",
+      "For our dental procedures, CevreDent Clinic only utilizes premium products like Ivoclar Vivadent, Straumann, and Nobel Biocare Implant. These products are well-known for their excellence, ensuring long-lasting and beneficial results for our patients. Our dedication to delivering the finest caliber of dental care is reflected in our commitment to these top brands. You might consult the European Journal of Dentistry, a reputable source for dental research, for additional information.",
   },
   {
-    question: "Am I a good candidate for rhinoplasty?",
+    question: "How long does Hollywood smile last?",
     answer:
-      "Good candidates for rhinoplasty are individuals who are in good overall health, have realistic expectations about the outcomes, and are seeking improvement in the appearance or function of their nose. A consultation with Dr. Kalkavan will help determine if you are a suitable candidate.",
+      "The duration of a Hollywood smile is determined by the durability of the dental implants, crowns, or veneers used. Porcelain veneers can last over 20 years, while composite veneers last approximately 10 years.",
   },
   {
-    question: "How long does the rhinoplasty surgery take?",
+    question: "How long does dental veneer last?",
     answer:
-      "Rhinoplasty surgery typically takes between 1.5 to 3 hours, depending on the complexity of the procedure and the techniques used.",
+      "Dental veneers can endure for a long period, particularly if they are well adhered to the enamel. While composite veneers normally have a lifespan of 7–10 years, strong porcelain veneers have the ability to survive for 20 years or even longer.",
   },
   {
-    question: "How long is the recovery period?",
+    question: "What does a dental crown do",
     answer:
-      "Initial recovery takes about 1-2 weeks, during which you may experience swelling and bruising. Most patients can return to work after 7-10 days. Full results are visible after 6-12 months as the swelling completely subsides.",
+      "A dental crown is a cap that resembles a tooth that can be used to restore a tooth that has been decayed, damaged, weaker, or worn down. In addition, dental professionals may cover root-treated teeth and dental implants with crowns. Crowns can endure anywhere between five and fifteen years.",
   },
   {
-    question: "Will I have visible scars after surgery?",
+    question: "Is implant very painful",
     answer:
-      "With closed rhinoplasty, all incisions are made inside the nose, leaving no visible scars. Open rhinoplasty involves a small incision on the columella, which typically heals to become nearly invisible.",
+      "During the dental implant procedure, local anesthesia will be used to numb the nerves around the implant area. This will prevent you from feeling any pain. You may experience some pressure, but it is not uncomfortable.",
   },
   {
-    question: "How many rhinoplasty surgeries has Dr. Can Kalkavan performed?",
+    question: "Is it painful to get a crown",
     answer:
-      "Dr. Can Kalkavan has performed over 20,000 successful rhinoplasty procedures with a 98% patient satisfaction rate.",
+      "The regular dental treatment of getting a crown could make some people nervous since they are afraid of the discomfort. However, because your dentist will numb your mouth before beginning any treatment, the procedure shouldn't be uncomfortable. This holds true for each step of the procedure, from the first appointment to the last fitting.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 bg-[#252d38]">
+    <section className="py-16 bg-[#0c1015]">
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] text-center mb-12">
           Frequently Asked Questions

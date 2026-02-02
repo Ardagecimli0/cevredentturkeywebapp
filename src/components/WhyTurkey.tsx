@@ -6,22 +6,22 @@ const reasons = [
   {
     title: "Affordable Prices:",
     description:
-      "Turkey offers rhinoplasty at more competitive prices than many European countries, while maintaining high standards of medical care.",
+      "Turkey offers high-quality dental treatments at competitive prices compared to many European countries.",
   },
   {
-    title: "Geographic Advantage:",
+    title: "Experienced Specialists:",
     description:
-      "With Istanbul as a global hub, patients can combine surgery with cultural experiences, making the journey both medical and touristic.",
+      "Experienced implantologists and dental technicians provide predictable and long-lasting results.",
   },
   {
     title: "Advanced Techniques:",
     description:
-      "Turkish surgeons are skilled in open, closed, and push-down & let-down rhinoplasty, achieving natural and functional results",
+      "Computer-guided implant placement, CAD/CAM restorations and modern implant systems ensure precision.",
   },
   {
-    title: "Cutting-Edge Technology:",
+    title: "Comprehensive Care:",
     description:
-      "Hospitals use 3D imaging, modern surgical tools, and innovative recovery methods, ensuring safe operations and faster healing.",
+      "From diagnostics to final restorations and aftercare everything is planned for a comfortable experience.",
   },
 ];
 
@@ -33,12 +33,12 @@ export default function WhyTurkey() {
           {/* Left Side - Title and Image */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-8">
-              Why Choose Turkey for Your Rhinoplasty?
+              Why Choose Turkey for Your Dental Treatment?
             </h2>
             <div className="overflow-hidden rounded-lg group cursor-pointer">
               <Image
                 src="/images/why-turkey.webp"
-                alt="Turkey Rhinoplasty"
+                alt="Turkey Dental Treatment"
                 width={500}
                 height={400}
                 className="w-full transition-transform duration-500 ease-out group-hover:scale-110"

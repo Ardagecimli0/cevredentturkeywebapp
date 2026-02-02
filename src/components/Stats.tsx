@@ -25,23 +25,29 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-12 bg-[#0c1015]">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <section className="py-16 bg-[#0c1015]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* 'w-full' ve 'items-stretch' ile tüm kartların aynı boyda olması sağlandı */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-[#151b23] rounded-xl p-6 text-center card-hover border border-gray-800"
-            >
-              <img
-                src={stat.icon}
-                alt=""
-                className="w-12 h-12 mx-auto mb-4 opacity-80"
-              />
-              <p className="text-3xl md:text-4xl font-bold text-[#c9a96e] mb-2">
-                {stat.value}
-              </p>
-              <p className="text-gray-400 text-sm">{stat.label}</p>
+            <div key={index} className="relative group flex w-full">
+              {/* Glow Efekti */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#c9a96e]/40 to-[#b08d57]/40 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+              {/* Ana Kart - 'flex-1' ile kapsayıcıyı tam doldurur */}
+              <div className="relative flex-1 bg-[#151b23] rounded-2xl p-8 text-center border border-gray-800 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#c9a96e]/30 flex flex-col items-center justify-center">
+                <img
+                  src={stat.icon}
+                  alt=""
+                  className="w-14 h-14 mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+                <p className="text-4xl font-bold text-[#c9a96e] mb-4">
+                  {stat.value}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed font-medium">
+                  {stat.label}
+                </p>
+              </div>
             </div>
           ))}
         </div>

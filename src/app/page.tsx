@@ -8,10 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import RhinoplastyBeforeAfterYT from "@/components/RhinoplastyBeforeAfterYT";
 import WhyTurkey from "@/components/WhyTurkey";
 import Packages from "@/components/Packages";
-import Techniques from "@/components/Techniques";
 import WhyDoctor from "@/components/WhyDoctor";
 import Publications from "@/components/Publications";
-import Journey from "@/components/Journey";
 import ContactForm from "@/components/ContactForm";
 import DoctorInfo from "@/components/DoctorInfo";
 import FAQ from "@/components/FAQ";
@@ -30,10 +28,8 @@ export default function Home() {
       <RhinoplastyBeforeAfterYT />
       <WhyTurkey />
       <Packages />
-      <Techniques />
       <WhyDoctor />
       <Publications />
-      <Journey />
       <ContactForm />
       <DoctorInfo />
       <FAQ />
