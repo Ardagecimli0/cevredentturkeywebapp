@@ -14,40 +14,39 @@ import ContactForm from "@/components/ContactForm";
 import DoctorInfo from "@/components/DoctorInfo";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import { ClientBody } from "@/app/ClientBody";
 import "@/app/globals.css";
 
+// JSON dosyasından metadata al
+import enDental from "../../../public/locales/en-dental.json";
+
 export const metadata = {
-  title: "Dental Implants in Turkey - CevreDent Clinic",
-  description: "Premium dental care in Turkey. Full mouth rehabilitation and implant treatments. Free consultation available.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+    title: enDental.meta.title,
+    description: enDental.meta.description,
+    keywords: enDental.meta.keywords,
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default function HomePage() {
-  return (
-    <html lang="en">
-      <ClientBody lang="en">
+    return (
         <main className="min-h-screen bg-[#0c1015]">
-          <Header />
-          <Hero />
-          <PressLogos />
-          <Stats />
-          <BeforeAfter />
-          <HospitalHotel />
-          <Testimonials />
-          <RhinoplastyBeforeAfterYT />
-          <WhyTurkey />
-          <Packages />
-          <WhyDoctor />
-          <Publications />
-          <ContactForm />
-          <DoctorInfo />
-          <FAQ />
-          <Footer />
+            <Header />
+            <Hero />
+            <PressLogos />
+            <Stats />
+            <BeforeAfter />
+            <HospitalHotel />
+            <Testimonials />
+            <RhinoplastyBeforeAfterYT />
+            <WhyTurkey />
+            <Packages />
+            <WhyDoctor />
+            <Publications />
+            <ContactForm />
+            <DoctorInfo />
+            <FAQ />
+            <Footer />
         </main>
-      </ClientBody>
-    </html>
-  );
+    );
 }
