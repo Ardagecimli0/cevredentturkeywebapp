@@ -45,7 +45,7 @@ export default function Hero() {
     try {
       // Get the current language from the URL
       const currentPath = window.location.pathname;
-      const slug = currentPath.split('/').filter(Boolean)[0] || '';
+      const slug = currentPath.split('/').filter(Boolean)[0] || 'dental-implant-in-turkey';
 
       // Map URL slug to locale
       const slugToLocale: Record<string, string> = {
@@ -85,14 +85,22 @@ export default function Hero() {
         Doctor: "CevreDent"
       };
 
+      console.log("Sending to Zoho:", payload);
+
       // Submit the form data to the API
-      await fetch(`https://zoho.hotelistan.net/api/form-patient`, {
+      const response = await fetch(`https://zoho.hotelistan.net/api/form-patient`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
+
+      console.log("Zoho response status:", response.status);
+
+      if (!response.ok) {
+        throw new Error(`API returned status: ${response.status}`);
+      }
 
       // Redirect to thank you page with localized URL
       window.location.href = `/${slug}/thank-you`;
