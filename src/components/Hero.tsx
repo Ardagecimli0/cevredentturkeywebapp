@@ -141,7 +141,7 @@ export default function Hero() {
         .hero-phone-input .country-list .country:hover { background-color: #0c1015 !important; }
       `}</style>
 
-      <div className={`max-w-7xl mx-auto px-4 mt-8 lg:mt-14 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+      <div className={`max-w-7xl mx-auto px-4 mt-4 lg:mt-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
         {/* Mobile Title Section (Visible only on mobile/tablet) */}
         <div className="lg:hidden text-center mb-1">
