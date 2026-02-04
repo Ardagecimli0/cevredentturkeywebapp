@@ -52,7 +52,7 @@ export default function Hero() {
       // Prepare the data to send to the API
       const payload = {
         name: name,
-        phone: `+${phone}`,
+        phone: `${countryCode}${phone}`,
         email: email,
         lead_source: "Google/Web Form",
         language: locale.toUpperCase(),
@@ -233,7 +233,7 @@ export default function Hero() {
                     </div>
                     <input
                       type="tel"
-                      placeholder={t('hero.formNamePlaceholder').replace('👤', '📞').replace('Your Name', 'Your Number')}
+                      placeholder="Your Phone"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"

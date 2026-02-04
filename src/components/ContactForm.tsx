@@ -47,7 +47,7 @@ export default function ContactForm() {
       // Prepare the data to send to the API in the format requested
       const payload = {
         name: name,
-        phone: `+${phone}`,
+        phone: `${countryCode}${phone}`,
         email: email,
         lead_source: "Google/Web Form",
         language: locale.toUpperCase(),
@@ -172,7 +172,7 @@ export default function ContactForm() {
                       </div>
                       <input
                         type="tel"
-                        placeholder={t('contactForm.phonePlaceholder')}
+                        placeholder="Your Phone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#0c1015] border border-gray-700 text-white placeholder-gray-500 focus:border-[#25D366] focus:outline-none transition-colors"
