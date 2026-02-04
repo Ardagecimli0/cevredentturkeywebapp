@@ -144,7 +144,7 @@ export default function ContactForm() {
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="bg-[#1c2530] rounded-xl p-6 border border-gray-600/50 space-y-4">
+                <div className="bg-[#4b5162] rounded-xl p-6 border border-gray-600/50 space-y-4">
 
                   {/* Name Input */}
                   <div className="relative">

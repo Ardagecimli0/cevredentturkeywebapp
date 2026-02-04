@@ -13,8 +13,8 @@
         "subtitle": "Améliorez votre sourire avec les",
         "subtitleLine2": "services abordables de la Clinique CevreDent",
         "formTitle": "Consultation Gratuite",
-        "formNamePlaceholder": "Votre Nom",
-        "formEmailPlaceholder": "Votre Email",
+        "formNamePlaceholder": "👤  Votre Nom",
+        "formEmailPlaceholder": "📧 Votre Email",
         "formSubmit": "ENVOYER"
     },
     "beforeAfter": {
@@ -27,9 +27,9 @@
     "contactForm": {
         "title": "Obtenez votre consultation gratuite",
         "subtitle": "Remplissez le formulaire et nous vous contacterons rapidement",
-        "namePlaceholder": "Votre Nom",
-        "phonePlaceholder": "Votre Téléphone",
-        "emailPlaceholder": "Votre Email",
+        "namePlaceholder": "👤 Votre Nom",
+        "phonePlaceholder": "📞 Votre Téléphone",
+        "emailPlaceholder": "📧 Votre Email",
         "submit": "ENVOYER"
     },
     "doctorInfo": {

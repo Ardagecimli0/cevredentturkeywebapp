@@ -13,8 +13,8 @@
         "subtitle": "Gülüşünüzü CevreDent ile Güzelleştirin",
         "subtitleLine2": "Kliniğin Uygun Fiyatlı Hizmetleri",
         "formTitle": "Ücretsiz Danışmanlık",
-        "formNamePlaceholder": "Adınız",
-        "formEmailPlaceholder": "E-postanız",
+        "formNamePlaceholder": "👤 Adınız",
+        "formEmailPlaceholder": "📧 E-postanız",
         "formSubmit": "GÖNDER"
     },
     "beforeAfter": {
@@ -27,9 +27,9 @@
     "contactForm": {
         "title": "Ücretsiz Danışmanlığınızı Alın",
         "subtitle": "Formu doldurun, sizinle kısa süre içinde iletişime geçelim",
-        "namePlaceholder": "Adınız",
-        "phonePlaceholder": "Telefonunuz",
-        "emailPlaceholder": "E-postanız",
+        "namePlaceholder": "👤 Adınız",
+        "phonePlaceholder": "📞 Telefonunuz",
+        "emailPlaceholder": "📧 E-postanız",
         "submit": "GÖNDER"
     },
     "doctorInfo": {

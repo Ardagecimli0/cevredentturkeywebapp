@@ -142,6 +142,14 @@ export default function Hero() {
       `}</style>
 
       <div className={`max-w-7xl mx-auto px-4 mt-8 lg:mt-14 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+
+        {/* Mobile Title Section (Visible only on mobile/tablet) */}
+        <div className="lg:hidden text-center mb-1">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            {t('hero.title')}
+          </h1>
+        </div>
+
         <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-start">
 
           {/* Sol Taraf - Doktor Görseli (Düzenlenen Kısım) */}
@@ -189,7 +197,7 @@ export default function Hero() {
           {/* Sağ Taraf - Başlık ve Form */}
           <div className="lg:col-span-5 space-y-6">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-[50px] font-bold text-white mb-4 leading-tight">
+              <h1 className="hidden lg:block text-4xl md:text-5xl lg:text-[50px] font-bold text-white mb-4 leading-tight">
                 {t('hero.title')}
               </h1>
               <p className="text-[#b08d57] text-xl md:text-2xl font-bold leading-snug">
@@ -198,31 +206,45 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="bg-[#1c2530]/80 backdrop-blur-sm rounded-xl p-5 border border-gray-800">
+            <div className="bg-[#4b5162] backdrop-blur-sm rounded-xl p-5 border border-gray-800">
               <h3 className="text-2xl font-bold text-white mb-4">{t('hero.formTitle')}</h3>
               <form onSubmit={handleSubmit} className="space-y-3">
-                <input
-                  type="text"
-                  placeholder={t('hero.formNamePlaceholder')}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
-                  required
-                />
+                <div className="relative">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder={t('hero.formNamePlaceholder')}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
+                    required
+                  />
+                </div>
                 <PhoneInput
                   country={countryCode}
                   value={phone}
                   onChange={(value) => setPhone(value)}
                   containerClass="hero-phone-input"
                 />
-                <input
-                  type="email"
-                  placeholder={t('hero.formEmailPlaceholder')}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
-                  required
-                />
+                <div className="relative">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
+                  <input
+                    type="email"
+                    placeholder={t('hero.formEmailPlaceholder')}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
+                    required
+                  />
+                </div>
                 <button type="submit" className="w-full bg-[#25D366] py-3 rounded-lg text-white font-bold hover:bg-[#1eb956] transition-colors">
                   {t('hero.formSubmit')}
                 </button>

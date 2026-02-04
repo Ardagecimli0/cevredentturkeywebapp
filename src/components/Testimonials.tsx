@@ -6,7 +6,7 @@ export default function Testimonials() {
   const { t, tArray } = useTranslation();
 
   return (
-    <section className="pt-24 pb-20 bg-[#0c1015]">
+    <section className="pt-10 lg:pt-24 pb-10 lg:pb-20 bg-[#0c1015]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
 
@@ -39,7 +39,7 @@ export default function Testimonials() {
 
           {/* Sağ Taraf - Hover Efektli Kartlar */}
           <div className="lg:w-[68%] grid grid-cols-1 md:grid-cols-3 gap-5">
-            {tArray < { text: string, name: string, country: string } > ('testimonials.reviews').map((review, index) => (
+            {tArray<{ text: string, name: string, country: string }>('testimonials.reviews').map((review, index) => (
               <div key={index} className="bg-[#1c2530] rounded-xl p-6 flex flex-col justify-between min-h-[300px] md:min-h-[440px] border border-gray-800/60 shadow-xl transition-all duration-300 hover:-translate-y-4 hover:border-[#c9a96e]/50 group">
                 <div className="relative">
                   <p className="text-gray-300 text-sm leading-relaxed pr-3 h-[200px] md:h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700">
