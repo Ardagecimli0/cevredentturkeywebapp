@@ -2,6 +2,7 @@
 
 export const localeToSlug: Record<string, string> = {
     'en': 'dental-implant-in-turkey',
+    'tr': 'dis-implanti-turkiye',
     'de': 'zahnimplantat-in-der-turkei',
     'es': 'implante-dental-en-turquia',
     'fr': 'implant-dentaire-en-turquie',
@@ -10,6 +11,7 @@ export const localeToSlug: Record<string, string> = {
 
 export const slugToLocale: Record<string, string> = {
     'dental-implant-in-turkey': 'en',
+    'dis-implanti-turkiye': 'tr',
     'zahnimplantat-in-der-turkei': 'de',
     'implante-dental-en-turquia': 'es',
     'implant-dentaire-en-turquie': 'fr',

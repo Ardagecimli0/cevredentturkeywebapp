@@ -22,6 +22,7 @@ export const dynamic = 'force-static';
 export async function generateStaticParams() {
     return [
         { lang: 'dental-implant-in-turkey' },          // English
+        { lang: 'dis-implanti-turkiye' },              // Turkish
         { lang: 'zahnimplantat-in-der-turkei' },       // German
         { lang: 'implante-dental-en-turquia' },        // Spanish
         { lang: 'implant-dentaire-en-turquie' },       // French

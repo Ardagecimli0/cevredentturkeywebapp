@@ -1,0 +1,275 @@
+{
+    "meta": {
+        "title": "Türkiye'de Dental İmplant | CevreDent Klinik İstanbul",
+        "description": "Türkiye'de premium dental implantlar ve tam ağız rehabilitasyonu. Deneyimli uzmanlar, uygun fiyatlar, ücretsiz danışmanlık. CevreDent Klinik İstanbul.",
+        "keywords": "dental implant türkiye, diş kliniği istanbul, hollywood gülüşü türkiye, diş kaplama türkiye, tam ağız rehabilitasyonu, uygun fiyatlı diş tedavisi türkiye"
+    },
+    "header": {
+        "ctaMobile": "Ücretsiz Danışmanlık",
+        "ctaDesktop": "Diş tedavileri için hemen bize ulaşın!"
+    },
+    "hero": {
+        "title": "Türkiye'de Diş Kliniği",
+        "subtitle": "Gülüşünüzü CevreDent ile Güzelleştirin",
+        "subtitleLine2": "Kliniğin Uygun Fiyatlı Hizmetleri",
+        "formTitle": "Ücretsiz Danışmanlık",
+        "formNamePlaceholder": "Adınız",
+        "formEmailPlaceholder": "E-postanız",
+        "formSubmit": "GÖNDER"
+    },
+    "beforeAfter": {
+        "title": "Bu Gülüşleri Görün",
+        "titleLine2": "Öncesi & Sonrası",
+        "titleLine3": "Dönüşümler",
+        "description": "Diş hekimliği uzmanlığımızla elde edilen doğal dönüşümleri keşfedin.",
+        "ctaButton": "Ücretsiz Danışmanlık"
+    },
+    "contactForm": {
+        "title": "Ücretsiz Danışmanlığınızı Alın",
+        "subtitle": "Formu doldurun, sizinle kısa süre içinde iletişime geçelim",
+        "namePlaceholder": "Adınız",
+        "phonePlaceholder": "Telefonunuz",
+        "emailPlaceholder": "E-postanız",
+        "submit": "GÖNDER"
+    },
+    "doctorInfo": {
+        "roles": {
+            "surgeon": {
+                "title": "Cerrah",
+                "description": "Diş Cerrahı & İmplant Uzmanı"
+            },
+            "labTechnician": {
+                "title": "Laboratuvar Teknisyeni",
+                "description": "Anlaşmalı laboratuvarımızda yüksek kaliteli protez üretimi"
+            },
+            "author": {
+                "title": "Yazar",
+                "description": "Uluslararası diş hekimliği dergilerinde klinik makaleler ve vaka çalışmaları"
+            }
+        },
+        "ctaTitle": "Diş tedavisi yolculuğunuzu şununla planlayın:",
+        "ctaClinicName": "CevreDent Diş Kliniği",
+        "freeConsultation": "Ücretsiz Danışmanlık",
+        "or": "veya",
+        "whatsapp": "WhatsApp"
+    },
+    "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "questions": [
+            {
+                "question": "İmplant markası önemli mi? İmplantın kalitesi var mı?",
+                "answer": "Diş prosedürlerimiz için CevreDent Klinik yalnızca Ivoclar Vivadent, Straumann ve Nobel Biocare İmplant gibi premium ürünler kullanır. Bu ürünler mükemmellikleriyle tanınır ve hastalarımız için uzun ömürlü ve faydalı sonuçlar sağlar. En iyi kalitede diş bakımı sunma konusundaki kararlılığımız, bu en iyi markalara olan bağlılığımızla yansıtılmaktadır. Ek bilgi için diş araştırmaları konusunda saygın bir kaynak olan Avrupa Diş Hekimliği Dergisi'ne (European Journal of Dentistry) başvurabilirsiniz."
+            },
+            {
+                "question": "Hollywood gülüşü ne kadar sürer?",
+                "answer": "Bir Hollywood gülüşünün ömrü, kullanılan diş implantlarının, kronların veya kaplamaların dayanıklılığına göre belirlenir. Porselen kaplamalar 20 yıldan fazla dayanabilirken, kompozit kaplamalar yaklaşık 10 yıl dayanır."
+            },
+            {
+                "question": "Diş kaplamaları (veneer) ne kadar dayanır?",
+                "answer": "Diş kaplamaları, özellikle mineye iyi yapıştırılmışlarsa uzun süre dayanabilir. Kompozit kaplamaların ömrü normalde 7-10 yıl iken, güçlü porselen kaplamalar 20 yıl veya daha uzun süre dayanabilir."
+            },
+            {
+                "question": "Diş kronu ne işe yarar?",
+                "answer": "Diş kronu, çürümüş, hasar görmüş, zayıflamış veya aşınmış bir dişi restore etmek için kullanılan dişe benzeyen bir kaplamadır. Ayrıca, diş hekimleri kanal tedavisi görmüş dişleri ve diş implantlarını kronlarla kaplayabilirler. Kronlar beş ila on beş yıl arasında dayanabilir."
+            },
+            {
+                "question": "İmplant çok ağrılı mıdır?",
+                "answer": "Dental implant prosedürü sırasında, implant bölgesindeki sinirleri uyuşturmak için lokal anestezi kullanılır. Bu, herhangi bir ağrı hissetmenizi önler. Biraz baskı hissedebilirsiniz ancak bu rahatsız edici değildir."
+            },
+            {
+                "question": "Kron taktırmak ağrılı mıdır?",
+                "answer": "Kron taktırma işlemi, rahatsızlıktan korktukları için bazı insanları tedirgin edebilir. Ancak diş hekiminiz tedaviye başlamadan önce ağzınızı uyuşturacağı için işlem rahatsız edici olmamalıdır. Bu, ilk randevudan son provaya kadar prosedürün her adımı için geçerlidir."
+            }
+        ]
+    },
+    "footer": {
+        "description": "Premium Diş Bakımı — Tam Ağız Rehabilitasyonu ve İmplant Uzmanı",
+        "copyright": "Telif Hakkı © 2026 CevreDent Klinik - Tüm Hakları Saklıdır",
+        "address": "Mecidiyeköy Mahallesi, Büyükdere Cd. Ocak Apt No:91 Kat 2 Daire:2, 34387 Şişli/İstanbul",
+        "email": "info@cevredent.com",
+        "phone": "+90 549 475 52 87"
+    },
+    "hospitalHotel": {
+        "clinicBadge": "KLİNİK",
+        "hotelBadge": "OTEL",
+        "clinicSubtitle": "Diş tedavilerimiz şurada gerçekleştirilir:",
+        "clinicName": "CevreDent Diş Kliniği",
+        "hotelSubtitle": "Misafirlerimiz şurada konaklar:",
+        "hotelName": "Istanbul Milord Hotel"
+    },
+    "packages": {
+        "title": "PAKETLERİMİZ",
+        "getMoreInfo": "Daha Fazla Bilgi Al",
+        "dentalImplants": {
+            "title": "Dental İmplantlar",
+            "features": [
+                "All On Four (Dörtlü İmplant)",
+                "All On Six (Altılı İmplant)",
+                "All On Eight (Sekizli İmplant)",
+                "Three On Six (Altı Üzerine Üç)",
+                "Tüm Ağız Dental İmplant"
+            ]
+        },
+        "dentalVeneers": {
+            "title": "Diş Kaplamaları (Veneer)",
+            "features": [
+                "Kompozit Kaplamalar",
+                "Porselen Kaplamalar",
+                "E-max Kaplamalar",
+                "Lamine Kaplamalar",
+                "Kesimsiz (Prepless) Kaplamalar",
+                "Tam Set Kaplama",
+                "Tam Ağız Dental İmplant"
+            ]
+        },
+        "dentalCrowns": {
+            "title": "Diş Kronları",
+            "features": [
+                "Celtra Kronlar",
+                "E-max Kronlar",
+                "Zirkonyum Kronlar",
+                "Porselen Kronlar",
+                "Tam Set Kronlar"
+            ]
+        }
+    },
+    "publications": {
+        "title": "Yayınlanmış Teknikler",
+        "titleLine2": "ve Klinik Çalışmalar",
+        "description": "İleri implant ve rehabilitasyon tekniklerini destekleyen",
+        "descriptionLine2": "klinik araştırmalar ve vaka raporları.",
+        "ctaButton": "Ücretsiz Danışmanlık"
+    },
+    "rhinoplastyBeforeAfterYT": {
+        "title": "Diş Dönüşümleri: Öncesi & Sonrası Sonuçlar",
+        "subtitle": "Hasta yolculuklarını ve gülüş tasarımlarını keşfedin."
+    },
+    "stats": {
+        "operations": {
+            "value": "+20000",
+            "label": "Tamamlanan binlerce başarılı diş rehabilitasyonu ve implant tedavisi"
+        },
+        "years": {
+            "value": "30+",
+            "label": "Diş rehabilitasyonu ve implant tedavilerinde deneyim yılı"
+        },
+        "recommend": {
+            "value": "%95",
+            "label": "Hastaların CevreDent'i tavsiye etme oranı"
+        },
+        "satisfaction": {
+            "value": "%98",
+            "label": "Diş operasyonları sonrası hasta memnuniyet oranı"
+        }
+    },
+    "testimonials": {
+        "title": "Dönüşüm ve",
+        "titleLine1": "Dönüşüm ve",
+        "titleLine2": "Özgüven Dolu",
+        "titleLine3": "Hasta Hikayeleri",
+        "subtitle": "Hastalarımızı seviyoruz ama sadece bizim sözümüze güvenmeyin. Hakkımızda neler söylediklerine bir göz atın!",
+        "ctaButton": "Hadi başlayalım",
+        "patientLabel": "Hasta",
+        "reviews": [
+            {
+                "text": "CevreDent Kliniği'nde tam ağız rehabilitasyonu geçirdim. İlk muayeneden son restorasyona kadar ekip net açıklamalar, kişiselleştirilmiş bir tedavi planı ve olağanüstü takip bakımı sağladı. İmplantlarım ve protezlerim doğal görünüyor, rahat hissettiriyor; yemek yerken ve gülerken özgüvenimi geri kazandırdı.",
+                "name": "Anna Müller",
+                "patient": "Hasta: Anna Müller",
+                "country": "DE"
+            },
+            {
+                "text": "Tüm süreç sorunsuzdu; kapsamlı teşhisler, gerçekçi zaman çizelgeleri ve özenli ameliyat sonrası destek. İmplant destekli köprüler çiğneme fonksiyonumu hızla geri kazandırdı ve estetik sonuç beklentilerimi aştı. Seyahat ve konaklama düzenlemeleri profesyonelce halledildi.",
+                "name": "Hannah Schmidt",
+                "patient": "Hasta: Hannah Schmidt",
+                "country": "DE"
+            },
+            {
+                "text": "CevreDent Klinik ekibi sanatı klinik mükemmellikle birleştiriyor. Restorasyonlar hassas ve doğal görünümlü; kapanış (oklüzyon) mükemmel hissettiriyor. Ekip minimum rahatsızlık sağladı ve net bakım talimatları verdi — özgüvenim ve konuşmam önemli ölçüde gelişti.",
+                "name": "Emily Thompson",
+                "patient": "Hasta: Emily Thompson",
+                "country": "GB"
+            }
+        ]
+    },
+    "whyDoctor": {
+        "title": "Diş Rehabilitasyonu İçin",
+        "titleLine1": "Diş Rehabilitasyonu İçin",
+        "titleLine2": "Neden CevreDent",
+        "titleLine3": "Kliniğini Seçmelisiniz?",
+        "ctaButton": "Ücretsiz Danışmanlık",
+        "features": {
+            "expertise": {
+                "label": "Uzmanlık:",
+                "text": "Fonksiyon ve estetiğe odaklanan implantoloji ve tam ağız rehabilitasyonu konusunda uzmanlaşmıştır."
+            },
+            "personalized": {
+                "label": "Kişiye Özel Planlar:",
+                "text": "Her hastanın klinik ihtiyaçlarına ve beklentilerine göre uyarlanmış tedavi planları."
+            },
+            "personalizedPlans": {
+                "label": "Kişiye Özel Planlar:",
+                "text": "Her hastanın klinik ihtiyaçlarına ve beklentilerine göre uyarlanmış tedavi planları."
+            },
+            "modern": {
+                "label": "Modern İş Akışı:",
+                "text": "Öngörülebilir sonuçlar için dijital teşhis ve CAD/CAM restorasyonları."
+            },
+            "modernWorkflow": {
+                "label": "Modern İş Akışı:",
+                "text": "Öngörülebilir sonuçlar için dijital teşhis ve CAD/CAM restorasyonları."
+            },
+            "aftercare": {
+                "label": "Bakım Sonrası:",
+                "text": "Kapsamlı takip ve diş sağlığınız için ömür boyu destek."
+            }
+        }
+    },
+    "whyTurkey": {
+        "title": "Diş Tedaviniz İçin Neden Türkiye'yi Seçmelisiniz?",
+        "reasons": {
+            "affordable": {
+                "title": "Uygun Fiyatlar:",
+                "description": "Türkiye, birçok Avrupa ülkesine kıyasla yüksek kaliteli diş tedavilerini rekabetçi fiyatlarla sunmaktadır."
+            },
+            "affordablePrices": {
+                "title": "Uygun Fiyatlar:",
+                "description": "Türkiye, birçok Avrupa ülkesine kıyasla yüksek kaliteli diş tedavilerini rekabetçi fiyatlarla sunmaktadır."
+            },
+            "specialists": {
+                "title": "Deneyimli Uzmanlar:",
+                "description": "Deneyimli implantologlar ve diş teknisyenleri, öngörülebilir ve uzun ömürlü sonuçlar sağlar."
+            },
+            "experiencedSpecialists": {
+                "title": "Deneyimli Uzmanlar:",
+                "description": "Deneyimli implantologlar ve diş teknisyenleri, öngörülebilir ve uzun ömürlü sonuçlar sağlar."
+            },
+            "techniques": {
+                "title": "İleri Teknikler:",
+                "description": "Bilgisayar destekli implant yerleştirme, CAD/CAM restorasyonlar ve modern implant sistemleri hassasiyet sağlar."
+            },
+            "advancedTechniques": {
+                "title": "İleri Teknikler:",
+                "description": "Bilgisayar destekli implant yerleştirme, CAD/CAM restorasyonlar ve modern implant sistemleri hassasiyet sağlar."
+            },
+            "care": {
+                "title": "Kapsamlı Bakım:",
+                "description": "Teşhisten son restorasyonlara ve bakım sonrasına kadar her şey konforlu bir deneyim için planlanmıştır."
+            },
+            "comprehensiveCare": {
+                "title": "Kapsamlı Bakım:",
+                "description": "Teşhisten son restorasyonlara ve bakım sonrasına kadar her şey konforlu bir deneyim için planlanmıştır."
+            }
+        }
+    },
+    "thankYou": {
+        "title": "Teşekkürler",
+        "message": "Mesajınız için teşekkür ederiz. En kısa sürede size geri dönüş yapacağız.",
+        "backToHome": "Ana Sayfaya Dön"
+    },
+    "cookieConsent": {
+        "title": "Çerez Tercihleri",
+        "description": "Tarama deneyiminizi geliştirmek, kişiselleştirilmiş reklamlar veya içerik sunmak ve trafiğimizi analiz etmek için çerezleri kullanıyoruz. \"Tümünü Kabul Et\"e tıklayarak çerez kullanımımıza izin vermiş olursunuz.",
+        "accept": "Tümünü Kabul Et",
+        "viewPreferences": "Tercihler"
+    }
+}

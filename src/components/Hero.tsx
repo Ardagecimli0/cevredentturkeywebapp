@@ -50,6 +50,7 @@ export default function Hero() {
       // Map URL slug to locale
       const slugToLocale: Record<string, string> = {
         'dental-implant-in-turkey': 'en',
+        'dis-implanti-turkiye': 'tr',
         'zahnimplantat-in-der-turkei': 'de',
         'implante-dental-en-turquia': 'es',
         'implant-dentaire-en-turquie': 'fr',
@@ -61,6 +62,7 @@ export default function Hero() {
       // Map language code to full name for Zoho
       const languageMap: Record<string, string> = {
         'en': 'English',
+        'tr': 'Turkish',
         'de': 'German',
         'es': 'Spanish',
         'fr': 'French',

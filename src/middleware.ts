@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 // Desteklenen dil kodları ve URL slug'ları
 const supportedRoutes: Record<string, string> = {
     'dental-implant-in-turkey': 'en',              // English
+    'dis-implanti-turkiye': 'tr',                  // Turkish
     'zahnimplantat-in-der-turkei': 'de',           // German
     'implante-dental-en-turquia': 'es',            // Spanish
     'implant-dentaire-en-turquie': 'fr',           // French

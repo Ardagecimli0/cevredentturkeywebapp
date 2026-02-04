@@ -5,6 +5,7 @@ import { extractLocaleFromSlug } from "@/lib/locale-utils";
 
 // JSON dosyalarını import et
 import enDental from "../../../public/locales/en-dental.json";
+import trDental from "../../../public/locales/tr-dental.json";
 import deDental from "../../../public/locales/de-dental.json";
 import esDental from "../../../public/locales/es-dental.json";
 import frDental from "../../../public/locales/fr-dental.json";
@@ -13,6 +14,7 @@ import itDental from "../../../public/locales/it-dental.json";
 // Translations map
 const translations: Record<string, typeof enDental> = {
   en: enDental,
+  tr: trDental,
   de: deDental,
   es: esDental,
   fr: frDental,
@@ -44,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export async function generateStaticParams() {
   return [
     { lang: 'dental-implant-in-turkey' },          // English
+    { lang: 'dis-implanti-turkiye' },              // Turkish
     { lang: 'zahnimplantat-in-der-turkei' },       // German
     { lang: 'implante-dental-en-turquia' },        // Spanish
     { lang: 'implant-dentaire-en-turquie' },       // French
