@@ -51,13 +51,13 @@ export default function ContactForm() {
         Mobile: `+${phone}`,
         Email: email,
         Country: countryName,
-        Interest: "-",
+        Interest: "Dental",
         Procedure: "-",
         Description: "-",
-        Lead_Source: "Website",
+        Lead_Source: "Google/Web Form",
         Lead_Source_Detail: "Cevredent Turkey Web App",
         Language: lang,
-        Doctor: "Cevre Dental Doctor"
+        Doctor: "CevreDent"
       };
 
       // Submit the form data to the API

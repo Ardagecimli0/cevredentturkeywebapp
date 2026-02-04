@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: data.meta.description,
     keywords: data.meta.keywords,
     icons: {
-      icon: "/favicon.ico",
+      icon: "/icon.ico",
     },
   };
 }
