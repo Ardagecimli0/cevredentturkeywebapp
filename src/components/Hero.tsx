@@ -146,7 +146,7 @@ export default function Hero() {
         {/* Mobile Title Section (Visible only on mobile/tablet) */}
         <div className="lg:hidden text-center mb-1">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            {t('hero.title')}
+            Dental Clinic in<br />Turkey
           </h1>
         </div>
 
@@ -198,7 +198,7 @@ export default function Hero() {
           <div className="lg:col-span-5 space-y-6">
             <div className="text-center lg:text-left">
               <h1 className="hidden lg:block text-4xl md:text-5xl lg:text-[50px] font-bold text-white mb-4 leading-tight">
-                {t('hero.title')}
+                Dental Clinic in<br />Turkey
               </h1>
               <p className="text-[#b08d57] text-xl md:text-2xl font-bold leading-snug">
                 {t('hero.subtitle')}<br />
