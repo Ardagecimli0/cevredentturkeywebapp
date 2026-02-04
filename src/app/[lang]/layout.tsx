@@ -34,7 +34,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: data.meta.description,
     keywords: data.meta.keywords,
     icons: {
-      icon: "/icon.ico",
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+      apple: '/favicon.ico',
     },
   };
 }

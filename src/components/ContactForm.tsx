@@ -54,7 +54,7 @@ export default function ContactForm() {
         Interest: "Dental",
         Procedure: "-",
         Description: "-",
-        Lead_Source: "Google/Web Form",
+        Lead_Source: "Web Form",
         Lead_Source_Detail: "Cevredent Turkey Web App",
         Language: lang,
         Doctor: "CevreDent"

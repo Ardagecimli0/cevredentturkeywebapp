@@ -11,6 +11,8 @@ const beforeAfterImages = [
   "/images/before-after/4.png",
   "/images/before-after/5.png",
   "/images/before-after/6.png",
+  "/images/before-after/7.png",
+  "/images/before-after/8.png",
 ];
 
 export default function BeforeAfter() {
