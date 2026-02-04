@@ -40,15 +40,15 @@ export default function Testimonials() {
           {/* Sağ Taraf - Hover Efektli Kartlar */}
           <div className="lg:w-[68%] grid grid-cols-1 md:grid-cols-3 gap-5">
             {tArray < { text: string, name: string, country: string } > ('testimonials.reviews').map((review, index) => (
-              <div key={index} className="bg-[#1c2530] rounded-xl p-6 flex flex-col justify-between min-h-[440px] border border-gray-800/60 shadow-xl transition-all duration-300 hover:-translate-y-4 hover:border-[#c9a96e]/50 group">
+              <div key={index} className="bg-[#1c2530] rounded-xl p-6 flex flex-col justify-between min-h-[300px] md:min-h-[440px] border border-gray-800/60 shadow-xl transition-all duration-300 hover:-translate-y-4 hover:border-[#c9a96e]/50 group">
                 <div className="relative">
-                  <p className="text-gray-300 text-sm leading-relaxed pr-3 h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700">
+                  <p className="text-gray-300 text-sm leading-relaxed pr-3 h-[200px] md:h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700">
                     {review.text}
                   </p>
                   <div className="absolute right-0 top-0 w-1 h-16 bg-[#c9a96e]/15 group-hover:bg-[#c9a96e]/40 transition-colors rounded-full"></div>
                 </div>
-                <div className="mt-8 pt-5 border-t border-gray-800/80">
-                  <p className="text-white font-semibold text-sm mb-2">
+                <div className="mt-0 pt-0 border-t border-gray-800/80">
+                  <p className="text-white font-semibold text-sm mb-0">
                     {t('testimonials.patientLabel')}: {review.name} <span className="text-gray-500 text-xs ml-1 font-normal">{review.country}</span>
                   </p>
                   <div className="flex gap-1 text-yellow-500">
