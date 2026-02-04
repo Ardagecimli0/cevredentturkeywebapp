@@ -37,7 +37,7 @@ export default function DoctorInfo() {
         {/* Doctor Video */}
         <div className="max-w-2xl mx-auto mb-12 aspect-video group cursor-pointer">
           <iframe
-            src="https://www.youtube.com/embed/FCV3mxonrkw"
+            src="https://youtube.com/shorts/OnHiHPa3ytY?si=JzGL2sDV-vhkXcB1"
             title="Dr. Can Kalkavan"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -83,7 +83,7 @@ export default function DoctorInfo() {
             </a>
             <span className="text-gray-400 text-sm">{t('doctorInfo.or')}</span>
             <a
-              href="https://api.whatsapp.com/send/?phone=905494755287&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send?phone=905494755287&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full max-w-xs px-8 py-4 rounded-full border-2 border-[#25D366] text-[#25D366] font-semibold hover:bg-[#25D366]/10 transition active:scale-95"
@@ -112,7 +112,7 @@ export default function DoctorInfo() {
             </a>
             <span className="flex items-center text-gray-400">{t('doctorInfo.or')}</span>
             <a
-              href="https://api.whatsapp.com/send/?phone=905494755287&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send?phone=905494755287&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#25D366] text-[#25D366] font-semibold hover:bg-[#25D366]/10 transition active:scale-95"

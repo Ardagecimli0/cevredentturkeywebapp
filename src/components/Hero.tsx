@@ -11,6 +11,7 @@ export default function Hero() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
+  const [countryName, setCountryName] = useState("Turkey"); // Default country name
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 
@@ -21,14 +22,18 @@ export default function Hero() {
   useEffect(() => {
     const detectCountry = async () => {
       try {
-        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
+        const response = await fetch("http://ip-api.com/json/?fields=country,countryCode");
         const data = await response.json();
         if (data.countryCode) {
           setCountryCode(data.countryCode.toLowerCase());
         }
+        if (data.country) {
+          setCountryName(data.country);
+        }
       } catch (error) {
         console.error("Could not detect country:", error);
         setCountryCode("tr");
+        setCountryName("Turkey");
       }
     };
     detectCountry();
@@ -38,11 +43,25 @@ export default function Hero() {
     e.preventDefault();
 
     try {
+      // Get the current language from the URL
+      const currentPath = window.location.pathname;
+      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
+      const lang = langMatch ? langMatch[1].toUpperCase() : 'EN'; // Default to EN if not found
+
       // Prepare the data to send to the API
-      const data = {
-        name: name,
-        phone: `+${phone}`,
-        email: email,
+      const payload = {
+        Patient_Name: name,
+        Patients_Status: "New",
+        Mobile: `+${phone}`,
+        Email: email,
+        Country: countryName,
+        Interest: "-",
+        Procedure: "-",
+        Description: "-",
+        Lead_Source: "Website",
+        Lead_Source_Detail: "Cevredent Turkey Web App",
+        Language: lang,
+        Doctor: "Cevre Dental Doctor"
       };
 
       // Submit the form data to the API
@@ -51,16 +70,12 @@ export default function Hero() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...data }),
+        body: JSON.stringify(payload),
       });
 
-      // Get the current language from the URL
-      const currentPath = window.location.pathname;
-      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
-      const lang = langMatch ? langMatch[1] : 'en';
-
       // Redirect to thank you page with language
-      window.location.href = `/${lang}-implant-in-turkey/thank-you`;
+      const langUrl = langMatch ? langMatch[1] : 'en';
+      window.location.href = `/${langUrl}-implant-in-turkey/thank-you`;
     } catch (error) {
       console.error("API isteği başarısız:", error);
       // Optionally show an error message to the user
@@ -164,13 +179,24 @@ export default function Hero() {
                 </button>
               </form>
             </div>
+
+            {/* Form Altı Görsel */}
+            <div className="flex justify-center w-full mt-4">
+              <Image
+                src="/images/log.png"
+                alt="Partner Logos"
+                width={400}
+                height={80}
+                className="w-auto h-10 md:h-12 object-contain opacity-90"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* WhatsApp Butonu */}
       <a
-        href="https://api.whatsapp.com/send/?phone=905494755287"
+        href="https://api.whatsapp.com/send?phone=905494755287&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
         target="_blank"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
       >

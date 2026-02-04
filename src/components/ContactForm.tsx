@@ -11,20 +11,25 @@ export default function ContactForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [countryCode, setCountryCode] = useState("tr");
+  const [countryName, setCountryName] = useState("Turkey"); // Default country name
   const { t } = useTranslation();
 
   // IP adresinden ülke otomatik algılama
   useEffect(() => {
     const detectCountry = async () => {
       try {
-        const response = await fetch("http://ip-api.com/json/?fields=countryCode");
+        const response = await fetch("http://ip-api.com/json/?fields=country,countryCode");
         const data = await response.json();
         if (data.countryCode) {
           setCountryCode(data.countryCode.toLowerCase());
         }
+        if (data.country) {
+          setCountryName(data.country);
+        }
       } catch (error) {
         console.error("Could not detect country:", error);
         setCountryCode("tr");
+        setCountryName("Turkey");
       }
     };
     detectCountry();
@@ -34,11 +39,25 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      // Prepare the data to send to the API
-      const data = {
-        name: name,
-        phone: `+${phone}`,
-        email: email,
+      // Get the current language from the URL
+      const currentPath = window.location.pathname;
+      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
+      const lang = langMatch ? langMatch[1].toUpperCase() : 'EN'; // Default to EN if not found
+
+      // Prepare the data to send to the API in the format requested
+      const payload = {
+        Patient_Name: name,
+        Patients_Status: "New",
+        Mobile: `+${phone}`,
+        Email: email,
+        Country: countryName,
+        Interest: "-",
+        Procedure: "-",
+        Description: "-",
+        Lead_Source: "Website",
+        Lead_Source_Detail: "Cevredent Turkey Web App",
+        Language: lang,
+        Doctor: "Cevre Dental Doctor"
       };
 
       // Submit the form data to the API
@@ -47,16 +66,12 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...data }),
+        body: JSON.stringify(payload),
       });
 
-      // Get the current language from the URL
-      const currentPath = window.location.pathname;
-      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
-      const lang = langMatch ? langMatch[1] : 'en';
-
-      // Redirect to thank you page with language
-      window.location.href = `/${lang}-implant-in-turkey/thank-you`;
+      // Redirect to thank you page with language (lowercase for URL)
+      const langUrl = langMatch ? langMatch[1] : 'en';
+      window.location.href = `/${langUrl}-implant-in-turkey/thank-you`;
     } catch (error) {
       console.error("API isteği başarısız:", error);
       // Optionally show an error message to the user
