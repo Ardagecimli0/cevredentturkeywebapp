@@ -67,18 +67,23 @@ export default function ContactForm() {
 
       // Prepare the data to send to the API in the format requested
       const payload = {
-        Patient_Name: name,
-        Patients_Status: "New",
-        Mobile: `+${phone}`,
-        Email: email,
-        Country: countryName,
-        Interest: "Dental",
-        Procedure: "-",
-        Description: "-",
-        Lead_Source: "Google/Web Form",
-        Lead_Source_Detail: "Cevredent Turkey Web App",
-        Language: languageName,
-        Doctor: "CevreDent"
+        name: name,
+        phone: `+${phone}`,
+        email: email,
+        lead_source: "Google/Web Form",
+        language: locale.toUpperCase(),
+        source_language: locale.toUpperCase(),
+        ip: "",
+        doctor: "Cevre Dent",
+        interest: ["Dental"],
+        procedure: [],
+        utm_source: "",
+        utm_medium: "",
+        utm_keyword: "",
+        utm_matchtype: "",
+        utm_network: "",
+        gclid: "",
+        lead_source_detail: "Cevredent Turkey Web App",
       };
 
       console.log("Sending to Zoho:", payload);
