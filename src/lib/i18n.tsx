@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from "react";
 import enDental from "../../public/locales/en-dental.json";
+import trDental from "../../public/locales/tr-dental.json";
 import deDental from "../../public/locales/de-dental.json";
 import esDental from "../../public/locales/es-dental.json";
 import frDental from "../../public/locales/fr-dental.json";
@@ -23,6 +24,7 @@ const I18nContext = createContext < I18nContextType | undefined > (undefined);
 
 const translations: Record<string, TranslationData> = {
     en: enDental,
+    tr: trDental,
     de: deDental,
     es: esDental,
     fr: frDental,
