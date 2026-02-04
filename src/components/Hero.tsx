@@ -138,7 +138,7 @@ export default function Hero() {
               width={500}
               height={600}
               // rounded-3xl: Köşeleri yuvarlar, overflow-hidden: Taşmaları keser, shadow-2xl: Hafif derinlik verir
-              className="w-full h-auto max-h-[500px] md:max-h-[500px] lg:max-h-[600px] object-cover transition-transform duration-300 ease-in-out hover:-translate-y-3 rounded-3xl overflow-hidden shadow-2xl"
+              className="w-full h-auto max-h-[400px] md:max-h-[450px] lg:max-h-[600px] object-cover object-top transition-transform duration-300 ease-in-out hover:-translate-y-3 rounded-3xl overflow-hidden shadow-2xl"
               priority
             />
 
