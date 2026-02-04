@@ -2,41 +2,19 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import { useTranslation } from "@/lib/i18n";
 
 export default function Hero() {
   const [name, setName] = useState("");
+  const [countryCode, setCountryCode] = useState("+90");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [countryCode, setCountryCode] = useState("tr");
-  const [countryName, setCountryName] = useState("Turkey"); // Default country name
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   useEffect(() => {
-    const detectCountry = async () => {
-      try {
-        const response = await fetch("http://ip-api.com/json/?fields=country,countryCode");
-        const data = await response.json();
-        if (data.countryCode) {
-          setCountryCode(data.countryCode.toLowerCase());
-        }
-        if (data.country) {
-          setCountryName(data.country);
-        }
-      } catch (error) {
-        console.error("Could not detect country:", error);
-        setCountryCode("tr");
-        setCountryName("Turkey");
-      }
-    };
-    detectCountry();
+    setIsVisible(true);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -224,12 +202,45 @@ export default function Hero() {
                     required
                   />
                 </div>
-                <PhoneInput
-                  country={countryCode}
-                  value={phone}
-                  onChange={(value) => setPhone(value)}
-                  containerClass="hero-phone-input"
-                />
+                <div className="flex gap-2">
+                  <select
+                    value={countryCode}
+                    onChange={(e) => setCountryCode(e.target.value)}
+                    className="w-28 px-3 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
+                  >
+                    <option value="+90">🇹🇷 +90</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+39">🇮🇹 +39</option>
+                    <option value="+34">🇪🇸 +34</option>
+                    <option value="+31">🇳🇱 +31</option>
+                    <option value="+46">🇸🇪 +46</option>
+                    <option value="+47">🇳🇴 +47</option>
+                    <option value="+45">🇩🇰 +45</option>
+                    <option value="+41">🇨🇭 +41</option>
+                    <option value="+43">🇦🇹 +43</option>
+                    <option value="+32">🇧🇪 +32</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+966">🇸🇦 +966</option>
+                  </select>
+                  <div className="flex-1 relative">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                    </div>
+                    <input
+                      type="tel"
+                      placeholder={t('hero.formNamePlaceholder').replace('👤', '📞').replace('Your Name', 'Your Number')}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="w-full pl-12 pr-4 py-3 rounded-lg bg-[#1c2530] border border-gray-600 text-white focus:border-[#25D366] outline-none"
+                      required
+                    />
+                  </div>
+                </div>
                 <div className="relative">
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
