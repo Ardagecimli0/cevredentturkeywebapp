@@ -41,8 +41,29 @@ export default function ContactForm() {
     try {
       // Get the current language from the URL
       const currentPath = window.location.pathname;
-      const langMatch = currentPath.match(/^\/(en|de|es|fr|it)-/);
-      const lang = langMatch ? langMatch[1].toUpperCase() : 'EN'; // Default to EN if not found
+      const slug = currentPath.split('/').filter(Boolean)[0] || '';
+
+      // Map URL slug to locale
+      const slugToLocale: Record<string, string> = {
+        'dental-implant-in-turkey': 'en',
+        'zahnimplantat-in-der-turkei': 'de',
+        'implante-dental-en-turquia': 'es',
+        'implant-dentaire-en-turquie': 'fr',
+        'impianto-dentale-in-turchia': 'it',
+      };
+
+      const locale = slugToLocale[slug] || 'en';
+
+      // Map language code to full name for Zoho
+      const languageMap: Record<string, string> = {
+        'en': 'English',
+        'de': 'German',
+        'es': 'Spanish',
+        'fr': 'French',
+        'it': 'Italian',
+      };
+
+      const languageName = languageMap[locale] || 'English';
 
       // Prepare the data to send to the API in the format requested
       const payload = {
@@ -54,9 +75,9 @@ export default function ContactForm() {
         Interest: "Dental",
         Procedure: "-",
         Description: "-",
-        Lead_Source: "Web Form",
+        Lead_Source: "Google/Web Form",
         Lead_Source_Detail: "Cevredent Turkey Web App",
-        Language: lang,
+        Language: languageName,
         Doctor: "CevreDent"
       };
 
@@ -69,9 +90,8 @@ export default function ContactForm() {
         body: JSON.stringify(payload),
       });
 
-      // Redirect to thank you page with language (lowercase for URL)
-      const langUrl = langMatch ? langMatch[1] : 'en';
-      window.location.href = `/${langUrl}-implant-in-turkey/thank-you`;
+      // Redirect to thank you page with localized URL
+      window.location.href = `/${slug}/thank-you`;
     } catch (error) {
       console.error("API isteği başarısız:", error);
       // Optionally show an error message to the user

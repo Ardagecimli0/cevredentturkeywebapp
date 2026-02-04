@@ -1,5 +1,8 @@
 // URL slug'dan dil kodunu çıkar
-// Örnek: "de-implant-in-turkey" -> "de", "en" -> "en", "" -> "en"
+// Örnekler: 
+// "zahnimplantat-in-der-turkei" -> "de"
+// "dental-implant-in-turkey" -> "en"
+// "implante-dental-en-turquia" -> "es"
 export function extractLocaleFromSlug(slug: string): string {
     if (!slug || slug === '') return 'en';
 
@@ -10,10 +13,17 @@ export function extractLocaleFromSlug(slug: string): string {
         return slug;
     }
 
-    // xx-implant-in-turkey formatından dil kodunu çıkar
-    const match = slug.match(/^(en|de|es|fr|it)-/);
-    if (match) {
-        return match[1];
+    // URL slug'dan dil kodunu eşleştir
+    const slugToLocale: Record<string, string> = {
+        'dental-implant-in-turkey': 'en',
+        'zahnimplantat-in-der-turkei': 'de',
+        'implante-dental-en-turquia': 'es',
+        'implant-dentaire-en-turquie': 'fr',
+        'impianto-dentale-in-turchia': 'it',
+    };
+
+    if (slugToLocale[slug]) {
+        return slugToLocale[slug];
     }
 
     return 'en';

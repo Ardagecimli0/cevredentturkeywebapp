@@ -3,11 +3,11 @@ import type { NextRequest } from 'next/server';
 
 // Desteklenen dil kodları ve URL slug'ları
 const supportedRoutes: Record<string, string> = {
-    'en-implant-in-turkey': 'en',
-    'de-implant-in-turkey': 'de',
-    'es-implant-in-turkey': 'es',
-    'fr-implant-in-turkey': 'fr',
-    'it-implant-in-turkey': 'it',
+    'dental-implant-in-turkey': 'en',              // English
+    'zahnimplantat-in-der-turkei': 'de',           // German
+    'implante-dental-en-turquia': 'es',            // Spanish
+    'implant-dentaire-en-turquie': 'fr',           // French
+    'impianto-dentale-in-turchia': 'it',           // Italian
 };
 
 export function middleware(request: NextRequest) {

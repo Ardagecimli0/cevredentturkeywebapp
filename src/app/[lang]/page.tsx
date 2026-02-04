@@ -21,11 +21,11 @@ export const dynamic = 'force-static';
 // Generate static params for all language routes
 export async function generateStaticParams() {
     return [
-        { lang: 'en-implant-in-turkey' },
-        { lang: 'de-implant-in-turkey' },
-        { lang: 'es-implant-in-turkey' },
-        { lang: 'fr-implant-in-turkey' },
-        { lang: 'it-implant-in-turkey' },
+        { lang: 'dental-implant-in-turkey' },          // English
+        { lang: 'zahnimplantat-in-der-turkei' },       // German
+        { lang: 'implante-dental-en-turquia' },        // Spanish
+        { lang: 'implant-dentaire-en-turquie' },       // French
+        { lang: 'impianto-dentale-in-turchia' },       // Italian
     ];
 }
 

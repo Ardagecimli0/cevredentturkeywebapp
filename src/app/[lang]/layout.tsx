@@ -43,11 +43,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export async function generateStaticParams() {
   return [
-    { lang: 'en-implant-in-turkey' },
-    { lang: 'de-implant-in-turkey' },
-    { lang: 'es-implant-in-turkey' },
-    { lang: 'fr-implant-in-turkey' },
-    { lang: 'it-implant-in-turkey' },
+    { lang: 'dental-implant-in-turkey' },          // English
+    { lang: 'zahnimplantat-in-der-turkei' },       // German
+    { lang: 'implante-dental-en-turquia' },        // Spanish
+    { lang: 'implant-dentaire-en-turquie' },       // French
+    { lang: 'impianto-dentale-in-turchia' },       // Italian
   ];
 }
 
@@ -59,7 +59,7 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  // URL slug'dan dil kodunu çıkar (örn: "de-implant-in-turkey" -> "de")
+  // URL slug'dan dil kodunu çıkar (örn: "zahnimplantat-in-der-turkei" -> "de")
   const locale = extractLocaleFromSlug(lang);
 
   return (
