@@ -78,7 +78,7 @@ export default function Hero() {
         language: locale.toUpperCase(),
         source_language: locale.toUpperCase(),
         ip: "",
-        doctor: "Cevre Dent",
+        doctor: "CevreDent",
         interest: ["Dental"],
         procedure: [],
         utm_source: "",
@@ -87,7 +87,6 @@ export default function Hero() {
         utm_matchtype: "",
         utm_network: "",
         gclid: "",
-        lead_source_detail: "Cevredent Turkey Web App",
       };
 
       console.log("Sending to Zoho:", payload);
