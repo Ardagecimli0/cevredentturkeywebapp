@@ -37,8 +37,7 @@ export default function DoctorInfo() {
         {/* Doctor Video */}
         <div className="max-w-2xl mx-auto mb-12 aspect-video group cursor-pointer">
           <iframe
-            src="https://youtube.com/shorts/OnHiHPa3ytY?si=JzGL2sDV-vhkXcB1"
-            title="Dr. Can Kalkavan"
+            src="https://www.youtube.com/embed/OnHiHPa3ytY"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full rounded-xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-[#c9a96e]/30"

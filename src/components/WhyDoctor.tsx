@@ -76,7 +76,7 @@ export default function WhyDoctor() {
           {/* Right Side - Video (Zıplama Efekti Eklendi) */}
           <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 ease-out hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(201,169,110,0.2)]">
             <iframe
-              src="https://www.youtube.com/embed/q0ndLJw8zH8"
+              src="https://www.youtube.com/embed/uQn1sesNkMI"
               title="CevreDent Dental Clinic"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
