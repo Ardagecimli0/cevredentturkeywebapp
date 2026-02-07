@@ -45,9 +45,9 @@ export default function Packages() {
                         href="https://api.whatsapp.com/send?phone=905494755287&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-start gap-3 text-gray-300 text-sm hover:text-white transition-colors cursor-pointer"
+                        className="flex items-start gap-3 text-gray-300 text-sm hover:text-white transition-all cursor-pointer underline underline-offset-4 decoration-[#c9a96e]/40 hover:decoration-[#c9a96e]"
                       >
-                        <span className="text-[#c9a96e] mt-0.5">•</span>
+                        <span className="text-[#c9a96e] mt-0.5 flex-shrink-0">•</span>
                         {feature}
                       </a>
                     </li>
