@@ -3,13 +3,34 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslation } from "@/lib/i18n";
+import { fetchCountryByIP, countryToDialCode } from "@/lib/getIp";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [countryCode, setCountryCode] = useState("+90");
+  const [selectedIso, setSelectedIso] = useState("TR");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const initCountry = async () => {
+      const result = await fetchCountryByIP();
+      if (result) {
+        setCountryCode(result.dialCode);
+        setSelectedIso(result.countryCode);
+      }
+    };
+    initCountry();
+  }, []);
+
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newIso = e.target.value;
+    setSelectedIso(newIso);
+    if (countryToDialCode[newIso]) {
+      setCountryCode(countryToDialCode[newIso]);
+    }
+  };
 
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -143,29 +164,16 @@ export default function ContactForm() {
                   {/* Phone Input */}
                   <div className="flex gap-2">
                     <div className="relative">
-                      <span className={`fi fi-${countryCode === '+90' ? 'tr' : countryCode === '+1' ? 'us' : countryCode === '+44' ? 'gb' : countryCode === '+49' ? 'de' : countryCode === '+33' ? 'fr' : countryCode === '+39' ? 'it' : countryCode === '+34' ? 'es' : countryCode === '+31' ? 'nl' : countryCode === '+46' ? 'se' : countryCode === '+47' ? 'no' : countryCode === '+45' ? 'dk' : countryCode === '+41' ? 'ch' : countryCode === '+43' ? 'at' : countryCode === '+32' ? 'be' : countryCode === '+971' ? 'ae' : countryCode === '+966' ? 'sa' : 'tr'} absolute left-3 top-1/2 -translate-y-1/2 z-10`}></span>
+                      <span className={`fi fi-${selectedIso.toLowerCase()} absolute left-3 top-1/2 -translate-y-1/2 z-10`}></span>
                       <select
-                        value={countryCode}
-                        onChange={(e) => setCountryCode(e.target.value)}
+                        value={selectedIso}
+                        onChange={handleCountryChange}
                         style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M1 1L6 6L11 1%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3e%3c/svg%3e')", backgroundPosition: 'right 0.5rem center', backgroundRepeat: 'no-repeat' }}
                         className="w-28 pl-9 py-3 pr-8 rounded-lg bg-[#0c1015] border border-gray-700 text-white focus:border-[#25D366] outline-none appearance-none"
                       >
-                        <option value="+90">+90</option>
-                        <option value="+1">+1</option>
-                        <option value="+44">+44</option>
-                        <option value="+49">+49</option>
-                        <option value="+33">+33</option>
-                        <option value="+39">+39</option>
-                        <option value="+34">+34</option>
-                        <option value="+31">+31</option>
-                        <option value="+46">+46</option>
-                        <option value="+47">+47</option>
-                        <option value="+45">+45</option>
-                        <option value="+41">+41</option>
-                        <option value="+43">+43</option>
-                        <option value="+32">+32</option>
-                        <option value="+971">+971</option>
-                        <option value="+966">+966</option>
+                        {Object.keys(countryToDialCode).sort().map((iso) => (
+                          <option key={iso} value={iso}>{iso} ({countryToDialCode[iso]})</option>
+                        ))}
                       </select>
                     </div>
                     <div className="flex-1 relative">
