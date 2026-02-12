@@ -13,8 +13,8 @@
         "subtitle": "Enhance Your Smile with CevreDent",
         "subtitleLine2": "Clinic's Affordable Services",
         "formTitle": "Free Consultation",
-        "formNamePlaceholder": "Your Name",
-        "formEmailPlaceholder": "Your Email",
+        "formNamePlaceholder": "👤 Your Name",
+        "formEmailPlaceholder": "📧 Your Email",
         "formSubmit": "SUBMIT"
     },
     "beforeAfter": {
@@ -27,9 +27,9 @@
     "contactForm": {
         "title": "Get Your Free Consultation",
         "subtitle": "Fill out the form and we'll contact you shortly",
-        "namePlaceholder": "Your Name",
-        "phonePlaceholder": "Your Phone",
-        "emailPlaceholder": "Your Email",
+        "namePlaceholder": "👤 Your Name",
+        "phonePlaceholder": "📞 Your Phone",
+        "emailPlaceholder": "📧 Your Email",
         "submit": "SUBMIT"
     },
     "doctorInfo": {

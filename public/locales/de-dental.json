@@ -13,8 +13,8 @@
         "subtitle": "Verbessern Sie Ihr Lächeln mit den",
         "subtitleLine2": "erschwinglichen Leistungen der CevreDent Klinik",
         "formTitle": "Kostenlose Beratung",
-        "formNamePlaceholder": "Ihr Name",
-        "formEmailPlaceholder": "Ihre E-Mail",
+        "formNamePlaceholder": "👤 Ihr Name",
+        "formEmailPlaceholder": "📧 Ihre E-Mail",
         "formSubmit": "ABSENDEN"
     },
     "beforeAfter": {
@@ -27,9 +27,9 @@
     "contactForm": {
         "title": "Holen Sie sich Ihre kostenlose Beratung",
         "subtitle": "Füllen Sie das Formular aus und wir kontaktieren Sie in Kürze",
-        "namePlaceholder": "Ihr Name",
-        "phonePlaceholder": "Ihre Telefonnummer",
-        "emailPlaceholder": "Ihre E-Mail",
+        "namePlaceholder": "👤 Ihr Name",
+        "phonePlaceholder": "📞 Ihre Telefonnummer",
+        "emailPlaceholder": "📧 Ihre E-Mail",
         "submit": "ABSENDEN"
     },
     "doctorInfo": {

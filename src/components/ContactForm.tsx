@@ -169,7 +169,7 @@ export default function ContactForm() {
                         value={selectedIso}
                         onChange={handleCountryChange}
                         style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M1 1L6 6L11 1%27 stroke=%27white%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3e%3c/svg%3e')", backgroundPosition: 'right 0.5rem center', backgroundRepeat: 'no-repeat' }}
-                        className="w-28 pl-9 py-3 pr-8 rounded-lg bg-[#0c1015] border border-gray-700 text-white focus:border-[#25D366] outline-none appearance-none"
+                        className="w-36 pl-9 py-3 pr-8 rounded-lg bg-[#0c1015] border border-gray-700 text-white focus:border-[#25D366] outline-none appearance-none text-sm"
                       >
                         {Object.keys(countryToDialCode).sort().map((iso) => (
                           <option key={iso} value={iso}>{iso} ({countryToDialCode[iso]})</option>
