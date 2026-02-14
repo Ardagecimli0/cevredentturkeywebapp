@@ -111,7 +111,7 @@ export default function BeforeAfter() {
 
             <div className="mt-8">
               <a
-                href="https://api.whatsapp.com/send?phone=905494755287&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
+                href="https://api.whatsapp.com/send?phone=905518622525&text=What%20are%20the%20options%20and%20pricing%20for%20dental%20treatment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#22c55e] px-8 py-4 rounded-full text-white font-bold hover:scale-105 transition-transform shadow-lg"
